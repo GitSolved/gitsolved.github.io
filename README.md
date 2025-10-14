@@ -1,48 +1,179 @@
-# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# SecureYourGear
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.secureyourgear.com)](https://www.secureyourgear.com)
+[![GitHub Pages](https://github.com/SecureYourGear/secureyourgear.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/SecureYourGear/secureyourgear.github.io/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-The Jekyll organization claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
+A cybersecurity blog focused on incident response, CTF writeups, penetration testing, and security automation. Visit the live site at [www.secureyourgear.com](https://www.secureyourgear.com).
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
+## About
 
-```shell
+SecureYourGear provides technical security content including:
+
+- **CTF Writeups**: Detailed solutions for Capture The Flag challenges (OverTheWire Bandit, etc.)
+- **Binary Exploitation**: ROP chain development, ret2libc techniques, buffer overflows
+- **AI Security**: LLM prompt injection, security implications of artificial intelligence
+- **Security Operations**: SOC automation labs, threat detection, incident response workflows
+- **Network Security**: VPN setup guides, secure networking practices
+- **Red Teaming**: Penetration testing techniques and methodologies
+
+## Tech Stack
+
+- **Static Site Generator**: [Jekyll](https://jekyllrb.com/) 4.4+
+- **Theme**: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) (heavily customized)
+- **Hosting**: GitHub Pages
+- **Deployment**: Automated via GitHub Actions
+- **Analytics**: Google Analytics
+
+### Custom Features
+
+- Pure black background with purple accent colors
+- Custom typography and post title styling
+- Animated site title with typing effect
+- EXIF-stripped images for privacy
+- Optimized for performance (minimal dependencies)
+
+## Local Development
+
+### Prerequisites
+
+- Ruby 3.3+
+- Bundler
+- Jekyll 4.4+
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SecureYourGear/secureyourgear.github.io.git
+   cd secureyourgear.github.io
+   ```
+
+2. Install dependencies:
+   ```bash
+   bundle install
+   ```
+
+3. Serve locally:
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. Open http://localhost:4000 in your browser
+
+### Development Commands
+
+```bash
+# Serve with live reload (default)
+bundle exec jekyll serve
+
+# Serve with drafts visible
+bundle exec jekyll serve --drafts
+
+# Build site (outputs to _site/)
+bundle exec jekyll build
+
+# Build for production
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+## Writing Posts
+
+Posts are written in Markdown and stored in `_posts/` with the naming convention: `YYYY-MM-DD-title.md`
+
+### Post Template
+
+```yaml
+---
+title: "Your Post Title"
+author: SecureYourGear Team
+date: YYYY-MM-DD HH:MM:SS -0400
+categories: [Category1, Category2]
+tags: [tag1, tag2, tag3]
+---
+
+Your content here...
+```
+
+### Adding Images
+
+Store post images in `/assets/img/posts/your-post-name/` and reference them:
+
+```markdown
+![Alt text](/assets/img/posts/your-post-name/image.png)
+```
+
+## Deployment
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions workflow (`.github/workflows/deploy.yml`).
+
+**Deployment Process**:
+1. Push commits to `main` branch
+2. GitHub Actions builds the site with Jekyll
+3. Site deploys to https://www.secureyourgear.com
+4. Updates are live within 1-2 minutes
+
+## Project Structure
+
+```
 .
-├── _config.yml
-├── _data
-├── _plugins
-├── _tabs
-└── index.html
+├── _config.yml           # Jekyll configuration
+├── _data/                # Data files (contact info, assets config)
+├── _includes/            # Custom HTML partials (head.html)
+├── _layouts/             # Custom page layouts (home.html)
+├── _plugins/             # Jekyll plugins (lastmod hook)
+├── _posts/               # Blog posts (Markdown)
+├── _sass/                # Custom SCSS (variables-hook.scss)
+├── _tabs/                # Static pages (About, Archives, etc.)
+├── assets/
+│   ├── css/              # Custom stylesheets
+│   ├── img/              # Images and favicons
+│   └── js/               # Custom JavaScript
+├── .github/workflows/    # GitHub Actions CI/CD
+└── index.html            # Homepage
 ```
 
-In order to save your time, and to prevent you from missing some files when copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+## Customization
 
-## Prerequisites
+### Color Scheme
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
+The site uses a custom pure black theme with purple accents. Colors are defined in:
+- `_sass/variables-hook.scss` - Theme color variables
+- `assets/css/custom.scss` - Component-specific styles
 
-## Installation
+### Key Customizations
 
-[**Use this template**][use-template] to generate a brand new repository and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
+1. **Theme Colors**: Modified in `_sass/variables-hook.scss`
+2. **Post Title Colors**: Blue titles defined in `assets/css/custom.scss`
+3. **Site Title Animation**: Custom typing effect in `assets/js/typing-effect.js`
+4. **Homepage Layout**: Custom layout in `_layouts/home.html` (removed author bylines)
+5. **Head Includes**: Modified `_includes/head.html` for custom CSS loading order
 
-Then clone it to your local machine and run:
+## Contributing
 
-```
-$ bundle
-```
+This is a personal blog, but if you notice any issues:
 
-## Usage
+1. Open an issue describing the problem
+2. Submit a pull request with proposed fixes
 
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+## Security
+
+- All images have EXIF metadata stripped to protect privacy
+- No personal information or credentials committed to repository
+- Git history has been sanitized of sensitive data
 
 ## License
 
-This work is published under [MIT][mit] License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
-# Trigger deployment
-# Trigger GitHub Pages deployment
+## Contact
+
+- **Website**: [www.secureyourgear.com](https://www.secureyourgear.com)
+- **Email**: samir@secureyourgear.com
+- **LinkedIn**: [Samir Anastasio](https://www.linkedin.com/in/samiranastasio/)
+- **GitHub**: [@SecureYourGear](https://github.com/SecureYourGear)
+- **Twitter**: [@SecureYourGear](https://twitter.com/SecureYourGear)
+
+---
+
+Built with [Jekyll](https://jekyllrb.com/) and [Chirpy Theme](https://github.com/cotes2020/jekyll-theme-chirpy)

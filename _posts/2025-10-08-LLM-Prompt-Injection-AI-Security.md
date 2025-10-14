@@ -1,5 +1,5 @@
 ---
-title: "LLM Prompt Injection - Lakera's Gandalf CTF: 1-8"
+title: "LLM Prompt Injection CTF Explained — Lakera's Gandalf 1 to 8 Challenge"
 author: SecureYourGear Team
 date: 2025-10-08 14:00:00 -0400
 categories: [AI Security, Red Team]

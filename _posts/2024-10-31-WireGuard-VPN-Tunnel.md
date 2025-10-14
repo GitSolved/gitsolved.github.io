@@ -1,5 +1,5 @@
 ---
-title: "WireGuard: VPN Tunnel"
+title: "WireGuard VPN Setup Guide: Complete Server & Client Configuration"
 author: SecureYourGear Team
 date: 2024-10-31 12:00:00 +0800
 categories: [Networking, VPN]

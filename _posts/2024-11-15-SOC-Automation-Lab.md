@@ -1,5 +1,5 @@
 ---
-title: "SOC Automation Lab: Wazuh, TheHive, and Shuffle"
+title: "Build a SOC Automation Lab: Wazuh SIEM + TheHive + Shuffle SOAR"
 author: SecureYourGear Team
 date: 2024-11-15 12:00:00 +0800
 categories: [Blue Team, SOC]

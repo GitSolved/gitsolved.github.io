@@ -14,7 +14,7 @@ Learn how to build a production-grade Security Operations Center (SOC) automatio
 
 ## What is a Security Operations Center (SOC)?
 
-Security Operations Centers (SOC) are centralized units that monitor, prevent, detect, investigate, and respond to cyber threats on a 24/7 basis. A modern SOC combines people, processes, and technology to protect an organization's digital assets.
+Security Operations Centers (SOCs) are centralized units that monitor, prevent, detect, investigate, and respond to cyber threats on a 24/7 basis. A modern SOC combines people, processes, and technology to protect an organization's digital assets.
 
 ### Common SOC Roles
 

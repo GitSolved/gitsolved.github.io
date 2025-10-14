@@ -391,7 +391,7 @@ exec more ~/text.txt
 exit 0
 ```
 
-It uses `more` to display text then exits! The key: `more` only paginates if the text doesn't fit on screen.
+It uses `more` to display text, then exits! The key: `more` only paginates if the text doesn't fit on screen.
 
 Step 3: Make your terminal very small (resize the window to just a few lines tall)
 

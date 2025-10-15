@@ -85,3 +85,20 @@ h1.post-title,
 .card.post-preview a:hover .card-title {
   color: #33bbff !important;
 }
+
+/* Post content images - Reduce screenshot sizes */
+.post-content img {
+  max-width: 70% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 1.5rem auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Responsive: Full width on mobile */
+@media (max-width: 768px) {
+  .post-content img {
+    max-width: 100% !important;
+  }
+}

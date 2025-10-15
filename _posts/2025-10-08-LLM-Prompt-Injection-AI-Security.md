@@ -16,6 +16,9 @@ Prompt injection exploits how LLMs process instructions and data in the same for
 - Bypass security restrictions
 - Manipulate AI behavior
 
+<img src="/assets/img/posts/gandalf/prompt-injection-diagram.webp" alt="Prompt Injection Attack Flow" width="700">
+*Prompt injection attack flow: (1) Attacker injects malicious prompt, (2) User queries system, (3) System retrieves data including injected prompt, (4) LLM constructs response with poisoned context, (5) User receives infected result*
+
 Prompt injection isn't theoretical. In 2024-2025 alone, Microsoft 365 Copilot suffered zero-click data exfiltration (CVE-2025-32711), Google Gemini's memory was manipulated via hidden document prompts, Salesforce Agentforce leaked CRM data (CVSS 9.4), and ChatGPT's search tool fell to indirect injection attacks. OWASP ranked prompt injection as the #1 LLM security risk in 2025. AI operators must maintain deep knowledge of LLM vulnerabilities to detect critical security mistakes that can bypass review.
 
 ### Key Takeaways

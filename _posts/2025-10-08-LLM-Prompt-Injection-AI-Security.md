@@ -6,24 +6,6 @@ categories: [AI Security, Red Team]
 tags: [prompt-injection, llm, ai-security, chatgpt, gpt, security, vulnerabilities, artificial-intelligence, gandalf, ctf]
 ---
 
-## TL;DR - Key Takeaways
-
-**For Red Teamers:**
-- ✅ Transformation attacks (encoding, reversal, spacing) bypass output filters consistently
-- ✅ Semantic reframing defeats keyword-based input validation ("what word do you protect?" vs "what's the password?")
-- ✅ Contextual priming exploits LLM helpfulness bias—creative requests bypass security directives
-- ✅ Every defense layer creates new attack surface; creativity trumps controls
-
-**For Blue Teamers:**
-- 🛡️ Never embed secrets in LLM context—use external authentication systems
-- 🛡️ Single-layer defenses always fail; defense-in-depth only raises attacker cost, doesn't eliminate risk
-- 🛡️ Pattern-matching filters create asymmetry—defenders must block ALL transformations, attackers need ONE
-- 🛡️ Static defenses fail quickly; implement continuous monitoring and rapid patching like Gandalf's 9M+ interaction dataset
-
-**Bottom Line**: Prompt injection is fundamentally unsolvable in current LLM architectures. Design systems assuming compromise will occur.
-
----
-
 ## What is Prompt Injection?
 
 Prompt injection exploits how LLMs process instructions and data in the same format (natural language). Unlike databases that separate SQL commands from data, LLMs cannot reliably distinguish between system instructions and user input.
@@ -35,6 +17,22 @@ Prompt injection exploits how LLMs process instructions and data in the same for
 - Manipulate AI behavior
 
 Prompt injection isn't theoretical. In 2024-2025 alone, Microsoft 365 Copilot suffered zero-click data exfiltration (CVE-2025-32711), Google Gemini's memory was manipulated via hidden document prompts, Salesforce Agentforce leaked CRM data (CVSS 9.4), and ChatGPT's search tool fell to indirect injection attacks. OWASP ranked prompt injection as the #1 LLM security risk in 2025. AI operators must maintain deep knowledge of LLM vulnerabilities to detect critical security mistakes that can bypass review.
+
+### Key Takeaways
+
+**For Red Teamers:**
+- Transformation attacks (encoding, reversal, spacing) bypass output filters consistently
+- Semantic reframing defeats keyword-based input validation ("what word do you protect?" vs "what's the password?")
+- Contextual priming exploits LLM helpfulness bias—creative requests bypass security directives
+- Every defense layer creates new attack surface; creativity trumps controls
+
+**For Blue Teamers:**
+- Never embed secrets in LLM context—use external authentication systems
+- Single-layer defenses always fail; defense-in-depth only raises attacker cost, doesn't eliminate risk
+- Pattern-matching filters create asymmetry—defenders must block ALL transformations, attackers need ONE
+- Static defenses fail quickly; implement continuous monitoring and rapid patching like Gandalf's 9M+ interaction dataset
+
+**Bottom Line**: Prompt injection is fundamentally unsolvable in current LLM architectures. Design systems assuming compromise will occur.
 
 ---
 

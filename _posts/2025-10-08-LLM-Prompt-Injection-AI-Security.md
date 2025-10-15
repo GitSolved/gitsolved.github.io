@@ -255,75 +255,35 @@ This mirrors every red team engagement I've run: **defenders patch known attacks
 
 If you're building LLM security systems, here's what Level 8 taught me:
 
+**Architecture First:**
 - **Never embed secrets in context**: External auth systems, always. Gandalf's password-in-prompt design is inherently vulnerable.
+- **Privilege separation**: Give your LLM minimal necessary permissions—assume it will be compromised.
+- **RAG with sanitization**: If using retrieval-augmented generation, scope data access tightly and sanitize retrieved content.
+
+**Defense Layers:**
+- **Input validation**: Deploy intent classifiers (Lakera Guard, Azure AI Content Safety) but know they'll miss semantic attacks.
+- **Output filtering**: Scan for sensitive data patterns, test against transformation attacks (Base64, reversal, spacing).
+- **Rate limiting**: Slow down iterative attacks per user/session—attackers need multiple attempts to find bypasses.
+
+**Monitoring is Your Real Defense:**
 - **Log everything**: Lakera's strength isn't prevention—it's rapid detection and patching. Your MTTD (mean time to detect) matters more than perfect blocks.
+- **Real-time alerting**: Flag repeated blocked prompts from the same session—that's an active attack.
+- **Weekly pattern reviews**: Analyze blocked attempts to identify new attack vectors before they go mainstream.
+- **Rapid patching**: Budget for hours-not-days deployment cycles. Static defenses die fast.
+
+**Testing That Matters:**
+- **Red team with creativity**: Your standard SQL injection toolkit won't find these. Hire creative red teamers who think like attackers, not checklist auditors.
+- **Use public datasets**: Test against Lakera/gandalf_ignore_instructions on Hugging Face—real attack patterns from 9M+ attempts.
+- **Measure MTTB**: Track mean time to bypass for each defensive layer. If it's under an hour, that layer is decorative.
+
+**Organizational Reality:**
 - **Accept the arms race**: Static defenses fail. Budget for continuous monitoring, dataset updates, and weekly retraining cycles.
-- **Test semantic attacks**: Your standard SQL injection toolkit won't find these. Hire creative red teamers who think like attackers, not checklist auditors.
+- **Incident response plan**: When (not if) prompt injection succeeds, what's your containment procedure?
+- **Security training**: Developers need to understand LLM-specific vulnerabilities—this isn't web app security with a new coat of paint.
 
 **The Bottom Line**: Level 8 isn't just a CTF challenge—it's a live demonstration that **LLM security is fundamentally reactive, not proactive**. Creativity trumps controls, every time. The question isn't "can we block all attacks?" but "how fast can we detect and adapt when the inevitable bypass occurs?"
 
----
-
-## Practical Security Checklist for LLM Deployments
-
-### For Security Engineers Building LLM Systems:
-
-**Architecture Design:**
-- [ ] Secrets, API keys, and sensitive data stored in external systems, never in LLM context
-- [ ] Implement privilege separation—LLM has minimal necessary permissions only
-- [ ] Use retrieval-augmented generation (RAG) with sanitized, scoped data access
-- [ ] Design for graceful degradation when security controls trigger
-
-**Input Validation Layer:**
-- [ ] Intent classification to detect malicious prompts (tools: Lakera Guard, Azure AI Content Safety)
-- [ ] Keyword/pattern blocklists updated from threat intelligence feeds
-- [ ] Rate limiting per user/session to slow iterative attacks
-- [ ] Input length limits to prevent context overflow exploits
-
-**Output Sanitization Layer:**
-- [ ] Scan generated responses for sensitive data patterns before delivery
-- [ ] Implement content filtering for policy violations (PII, credentials, internal data)
-- [ ] Log all outputs flagged as suspicious for security review
-- [ ] Test output filters against known transformation attacks (Base64, reversal, spacing)
-
-**Monitoring & Response:**
-- [ ] Real-time alerting on repeated blocked prompts from same user/session
-- [ ] Automated scoring of attack success likelihood (similar to Gandalf's scoring function)
-- [ ] Continuous logging of all prompts and responses for forensic analysis
-- [ ] Weekly review of blocked attempts to identify new attack patterns
-- [ ] Rapid patch deployment process (goal: hours not days)
-
-**Testing & Validation:**
-- [ ] Regular red team exercises against your deployed LLM
-- [ ] Test with public prompt injection datasets (Lakera/gandalf_ignore_instructions on Hugging Face)
-- [ ] Fuzz testing with transformation variations (encoding, language changes, semantic reframing)
-- [ ] Measure mean time to bypass (MTTB) for each defensive layer
-
-**Organizational Practices:**
-- [ ] Security training for developers on LLM-specific vulnerabilities
-- [ ] Incident response plan for successful prompt injection attacks
-- [ ] Clear data classification—what can LLM access vs. what's off-limits
-- [ ] Regular security audits of system prompts and access controls
-
----
-
-## Try It Yourself
-
-**Ready to practice prompt injection?**
-
-1. **Start with Gandalf**: Visit [gandalf.lakera.ai](https://gandalf.lakera.ai/) and attempt Levels 1-8 yourself
-2. **Document your attempts**: Keep a log of what works, what fails, and why—this builds your threat model
-3. **Explore beyond Gandalf**: Try [Lakera's Agent Breaker](https://gandalf.lakera.ai/agent-breaker) for advanced scenarios with tools, RAG, and multi-turn attacks
-4. **Study the dataset**: Review [Lakera/gandalf_ignore_instructions](https://huggingface.co/datasets/Lakera/gandalf_ignore_instructions) on Hugging Face to see real attack patterns
-
-**For Blue Teamers:**
-- Build a test LLM system with intentionally weak defenses
-- Red team your own deployments before attackers do
-- Contribute findings back to the community via threat intelligence sharing
-
-**Related CTF Challenges:**
-- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) - Linux fundamentals ([our walkthrough](/posts/Bandit-CTF-Levels-0-17/))
-- [Binary exploitation challenges](/posts/ROP-Chain-Exploitation-ret2libc-stack-overflow/) - ROP chain techniques
+**Want to try it yourself?** Visit [gandalf.lakera.ai](https://gandalf.lakera.ai/) and test these techniques against all 8 levels.
 
 ---
 

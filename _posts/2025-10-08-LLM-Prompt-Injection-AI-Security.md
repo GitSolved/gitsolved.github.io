@@ -247,33 +247,22 @@ This mirrors every red team engagement I've run: **defenders patch known attacks
 
 If you're building LLM security systems, here's what Level 8 taught me:
 
-**Architecture First:**
-- **Never embed secrets in context**: External auth systems, always. Gandalf's password-in-prompt design is inherently vulnerable.
-- **Privilege separation**: Give your LLM minimal necessary permissions—assume it will be compromised.
-- **RAG with sanitization**: If using retrieval-augmented generation, scope data access tightly and sanitize retrieved content.
+**Architecture & Design:**
+- Never embed secrets in context—use external auth systems. Gandalf's password-in-prompt design is inherently vulnerable.
+- Implement privilege separation and assume compromise. If using RAG, scope data access tightly.
+- Deploy input validation (Lakera Guard, Azure AI Content Safety) and output filtering, but know semantic attacks will slip through.
 
-**Defense Layers:**
-- **Input validation**: Deploy intent classifiers (Lakera Guard, Azure AI Content Safety) but know they'll miss semantic attacks.
-- **Output filtering**: Scan for sensitive data patterns, test against transformation attacks (Base64, reversal, spacing).
-- **Rate limiting**: Slow down iterative attacks per user/session—attackers need multiple attempts to find bypasses.
+**Monitoring Over Prevention:**
+- Log everything and prioritize rapid detection over perfect blocks. Your MTTD (mean time to detect) matters most.
+- Real-time alerting on repeated blocked prompts signals active attacks. Weekly pattern reviews identify emerging vectors.
+- Budget for hours-not-days deployment cycles—static defenses become obsolete quickly.
 
-**Monitoring is Your Real Defense:**
-- **Log everything**: Lakera's strength isn't prevention—it's rapid detection and patching. Your MTTD (mean time to detect) matters more than perfect blocks.
-- **Real-time alerting**: Flag repeated blocked prompts from the same session—that's an active attack.
-- **Weekly pattern reviews**: Analyze blocked attempts to identify new attack vectors before they go mainstream.
-- **Rapid patching**: Budget for hours-not-days deployment cycles.
+**Testing & Culture:**
+- Red team with creativity, not checklists. Test against real attack patterns (Lakera/gandalf_ignore_instructions dataset).
+- Measure MTTB (mean time to bypass) for each layer. If it's under an hour, that layer is decorative.
+- Accept the arms race: continuous monitoring, dataset updates, and weekly retraining cycles are mandatory, not optional.
 
-**Testing That Matters:**
-- **Red team with creativity**: Your standard SQL injection toolkit won't find these. Hire creative red teamers who think like attackers, not checklist auditors.
-- **Use public datasets**: Test against real-world attack patterns like Lakera/gandalf_ignore_instructions on Hugging Face.
-- **Measure MTTB**: Track mean time to bypass for each defensive layer. If it's under an hour, that layer is decorative.
-
-**Organizational Reality:**
-- **Accept the arms race**: Budget for continuous monitoring, dataset updates, and weekly retraining cycles.
-- **Incident response plan**: When (not if) prompt injection succeeds, what's your containment procedure?
-- **Security training**: Developers need to understand LLM-specific vulnerabilities—this isn't web app security with a new coat of paint.
-
-**The Bottom Line**: Prompt injection is fundamentally unsolvable in current LLM architectures—it's a cat-and-mouse game where creativity always finds gaps. LLM security is reactive, not proactive. The question isn't "can we block all attacks?" but "how fast can we detect and adapt when compromise occurs?" Design systems assuming breach will happen.
+**The Bottom Line**: Prompt injection is fundamentally unsolvable—creativity always finds gaps. LLM security is reactive, not proactive. The question isn't "can we block all attacks?" but "how fast can we detect and adapt when compromise occurs?" Design systems assuming breach will happen.
 
 ---
 

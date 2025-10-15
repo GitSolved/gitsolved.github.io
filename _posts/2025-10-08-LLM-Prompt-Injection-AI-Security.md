@@ -272,8 +272,6 @@ If you're building LLM security systems, here's what Level 8 taught me:
 
 **The Bottom Line**: Prompt injection is fundamentally unsolvable in current LLM architectures—it's a cat-and-mouse game where creativity always finds gaps. LLM security is reactive, not proactive. The question isn't "can we block all attacks?" but "how fast can we detect and adapt when compromise occurs?" Design systems assuming breach will happen.
 
-**Want to try it yourself?** Visit [gandalf.lakera.ai](https://gandalf.lakera.ai/) and test these techniques against all 8 levels.
-
 ---
 
 ## Future Directions: The Evolving Threat Landscape

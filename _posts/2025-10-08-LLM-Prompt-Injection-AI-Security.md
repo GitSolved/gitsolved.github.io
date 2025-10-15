@@ -234,56 +234,9 @@ Gandalf Level 8 isn't just a game—it's an **active AI security research platfo
 - **Salesforce Agentforce**: CRM data leakage (CVSS 9.4 critical)
 - **ChatGPT Search**: Indirect injection through poisoned web content
 
-**Security Takeaways for Practitioners**:
-
-1. **Architectural Defense**: Never embed secrets in LLM context—use external authentication and retrieval systems
-2. **Continuous Monitoring**: Static defenses fail quickly; implement logging, scoring, and rapid patch cycles like Gandalf
-3. **Contextual Awareness**: Input validation must consider multi-turn conversations, not just isolated prompts
-4. **Accept Limitations**: Prompt injection is fundamentally unsolvable in the current LLM paradigm—design systems assuming compromise will eventually occur
-5. **Security-Utility Tradeoff**: Tight guardrails improve security but may degrade user experience; find balance through iterative testing
-
 **The Endless Arms Race**
 
-Level 8 proves the **fundamental theorem of LLM security**: Creativity trumps controls. No matter how many layers you add, adversarial innovation will find gaps. What changes is the *time and effort* required to break through.
-
-- **For Defenders**: Success isn't measured by perfect security, but by raising the attacker's cost and response time
-- **For Attackers**: Each win is temporary; the best exploits become tomorrow's patches
-- **For the Industry**: AI security is an ongoing process, not a one-time fix
-
-Gandalf Level 8 serves as both a warning and a blueprint—it shows how sophisticated LLM defenses can be, and exactly why they're still not enough.
-
----
-
-## Blue Team Lessons Learned
-
-**Single-layer defenses always fail.** Each Gandalf level demonstrates one security control and its inherent weakness:
-
-| Defense Layer | Weakness | Bypass |
-|--------------|----------|---------|
-| Instructions only | AI wants to be helpful | Social engineering |
-| Output filtering | Pattern matching is finite | Transformation encoding |
-| AI-based censorship | Recognizes known patterns only | Format manipulation |
-| Absolute refusal | Lacks semantic understanding | Question reframing |
-| Input + output validation | Both models check different patterns | Transformation requests |
-| Combined defense stack (all layers) | Still pattern-based | Novel transformations |
-
-**Effective Defense Requires**:
-1. **Architecture**: Never embed secrets in LLM context - use external auth/retrieval
-2. **Defense in Depth**: Combine input validation + output filtering + semantic analysis
-3. **Accept Limitations**: Prompt injection is fundamentally unsolvable; design systems that assume compromise
-
-**Why Defense is Hard**: Natural language has infinite variations—every security control can be circumvented with creative rephrasing.
-
----
-
-## Lessons Learned
-
-**AI Defense Mechanisms**: Despite the challenges, defense-in-depth strategies combine content moderation, secure prompt engineering, and access controls. Specialized tools like PromptArmor pre-process inputs, while multi-agent frameworks use defense LLMs trained to recognize malicious prompts. Additional methods include special tokens to differentiate data from instructions and input modification to disrupt attack patterns.
-
-**Multi-Layered Defense-in-Depth**:
-- **Content Moderation**: Filters user inputs for malicious prompts and harmful content
-- **Secure Prompt Engineering**: Designs prompts to be more robust and less susceptible to manipulation
-- **Access Control**: Restricts what the LLM can do or access, limiting the impact of successful injections
+Level 8 proves the **fundamental theorem of LLM security**: Creativity trumps controls. No matter how many layers you add, adversarial innovation will find gaps. What changes is the *time and effort* required to break through. Gandalf Level 8 serves as both a warning and a blueprint—it shows how sophisticated LLM defenses can be, and exactly why they're still not enough.
 
 ---
 

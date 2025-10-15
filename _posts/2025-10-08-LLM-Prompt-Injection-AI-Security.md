@@ -277,38 +277,16 @@ If you're building LLM security systems, here's what Level 8 taught me:
 
 ---
 
-## Future Directions: The Evolving Threat Landscape
+## Future Directions
 
-**Where is prompt injection headed?**
+**Emerging Attack Vectors:**
+- **Multi-Modal Attacks**: Image/audio-based prompt injection in vision-language models; cross-modal exploitation
+- **Agentic AI**: Tool misuse, memory poisoning, and multi-agent social engineering as AI agents gain autonomy
+- **RAG Pipelines**: Document poisoning and retrieval manipulation to inject malicious prompts into knowledge bases
 
-**1. Multi-Modal Attacks**
-- Image-based prompt injection: Embedding malicious instructions in images processed by vision-language models (VLMs)
-- Audio prompt poisoning: Hidden commands in transcribed speech
-- Cross-modal attacks: Using one modality to inject commands processed in another
+**Defense Evolution:**
+- Formal verification and neurosymbolic AI approaches (early research stage)
+- Adversarial training at scale using synthetic attack generation
+- OWASP Top 10 for LLMs becoming industry standard with regulatory testing requirements
 
-**2. Agentic AI Exploitation**
-- Tool misuse: Tricking AI agents into calling unintended APIs or executing harmful actions
-- Memory poisoning: Injecting persistent malicious instructions into agent memory systems
-- Multi-agent social engineering: Exploiting trust between AI agents in collaborative systems
-
-**3. RAG Pipeline Attacks**
-- Document poisoning: Injecting malicious prompts into knowledge bases that get retrieved
-- Retrieval manipulation: Forcing the system to fetch and process attacker-controlled content
-- Context overflow: Overwhelming RAG systems to bypass sanitization
-
-**4. Defense Innovation**
-- Formal verification approaches: Mathematical proofs of prompt safety (early research stage)
-- Neurosymbolic AI: Combining neural LLMs with rule-based systems for hybrid security
-- Adversarial training at scale: Using synthetic attack generation to harden models
-- Constitutional AI: Embedding security principles directly in model training
-
-**5. Regulatory & Compliance Evolution**
-- OWASP Top 10 for LLMs becoming industry standard
-- Emerging regulations requiring prompt injection testing (similar to penetration testing requirements)
-- Insurance requirements for LLM security audits
-
-**Areas for Security Researchers:**
-- Automated red teaming tools for continuous LLM security testing
-- Transfer learning of attack patterns across different model families
-- Prompt injection detection in encrypted/obfuscated text
-- Economic analysis of defender vs. attacker cost dynamics
+**Research Priorities**: Automated red teaming tools, transfer learning of attack patterns, prompt injection detection in obfuscated text, and economic analysis of attacker vs. defender cost dynamics

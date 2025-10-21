@@ -1,5 +1,5 @@
 ---
-title: "OverTheWire Bandit CTF: Levels 18-33"
+title: "OverTheWire - Linux CTF: Levels 18-33"
 author: SecureYourGear Team
 date: 2024-10-17 12:00:00 +0800
 categories: [CTF, OverTheWire]

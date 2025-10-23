@@ -1,6 +1,6 @@
 ---
 title: "WireGuard VPN Configuration & Troubleshooting on Raspberry Pi"
-author: SecureYourGear Team
+author: GitSolved Team
 date: 2024-10-31 12:00:00 +0800
 categories: [Networking, VPN]
 tags: [wireguard, vpn, privacy, security, networking, encryption]
@@ -339,4 +339,4 @@ WireGuard represents a modern approach to VPN technology, offering simplicity wi
 
 ---
 
-**Support SecureYourGear**: Explore more networking and security guides in our [Networking category](https://www.secureyourgear.com/categories/networking/).
+**Support GitSolved**: Explore more networking and security guides in our [Networking category](https://gitsolved.github.io/categories/networking/).

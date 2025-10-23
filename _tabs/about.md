@@ -8,4 +8,4 @@ order: 4
 
 **Connect:**
 - [LinkedIn](https://www.linkedin.com/in/samiranastasio/)
-- [GitHub](https://github.com/SecureYourGear)
+- [GitHub](https://github.com/GitSolved)

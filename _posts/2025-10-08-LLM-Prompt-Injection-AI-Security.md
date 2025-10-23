@@ -1,6 +1,6 @@
 ---
 title: "LLM Prompt Injection - Lakera's AI Security CTF: 1-8"
-author: SecureYourGear Team
+author: GitSolved Team
 date: 2025-10-08 14:00:00 -0400
 categories: [AI Security, Red Team]
 tags: [prompt-injection, llm, ai-security, chatgpt, gpt, security, vulnerabilities, artificial-intelligence, gandalf, ctf]

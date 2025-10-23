@@ -1,5 +1,5 @@
 ---
-title: "WireGuard VPN Configuration & Troubleshooting on Raspberry Pi"
+title: "WireGuard VPN Configuration and Troubleshooting"
 author: GitSolved Team
 date: 2024-10-31 12:00:00 +0800
 categories: [Networking, VPN]

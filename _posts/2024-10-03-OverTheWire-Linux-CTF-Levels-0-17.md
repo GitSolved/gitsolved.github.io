@@ -1,6 +1,6 @@
 ---
 title: "OverTheWire - Linux CTF: Levels 0-17"
-author: GitSolved Team
+author: SecureYourGear Team
 date: 2024-10-03 12:00:00 +0800
 categories: [CTF, OverTheWire]
 tags: [bandit, overthewire, ctf, linux, command-line, ssh, networking, file-manipulation, nmap]

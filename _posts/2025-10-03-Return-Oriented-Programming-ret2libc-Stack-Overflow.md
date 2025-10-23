@@ -1,6 +1,6 @@
 ---
 title: "Return-Oriented Programming: ret2libc Stack Overflow"
-author: GitSolved Team
+author: SecureYourGear Team
 date: 2025-10-03 12:00:00 +0800
 categories: [CTF, Binary Exploitation]
 tags: [rop, buffer-overflow, pwn, binary-exploitation, ret2libc, aslr-bypass]

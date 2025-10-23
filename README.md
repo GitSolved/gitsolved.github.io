@@ -1,14 +1,14 @@
-# GitSolved
+# SecureYourGear
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitsolved.github.io)](https://gitsolved.github.io)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.secureyourgear.com)](https://www.secureyourgear.com)
 [![GitHub Pages](https://github.com/GitSolved/gitsolved.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/GitSolved/gitsolved.github.io/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-AI Security Research & CTF Challenges - A technical security blog focused on OWASP LLM vulnerabilities, CTF writeups, binary exploitation, and cybersecurity research. Visit the live site at [gitsolved.github.io](https://gitsolved.github.io).
+AI Security Research & CTF Challenges - A technical security blog focused on OWASP LLM vulnerabilities, CTF writeups, binary exploitation, and cybersecurity research. Visit the live site at [www.secureyourgear.com](https://www.secureyourgear.com).
 
 ## About
 
-GitSolved provides technical security content including:
+SecureYourGear provides technical security content including:
 
 - **CTF Writeups**: Detailed solutions for Capture The Flag challenges (OverTheWire Bandit, etc.)
 - **Binary Exploitation**: ROP chain development, ret2libc techniques, buffer overflows
@@ -86,7 +86,7 @@ Posts are written in Markdown and stored in `_posts/` with the naming convention
 ```yaml
 ---
 title: "Your Post Title"
-author: GitSolved Team
+author: SecureYourGear Team
 date: YYYY-MM-DD HH:MM:SS -0400
 categories: [Category1, Category2]
 tags: [tag1, tag2, tag3]
@@ -110,7 +110,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 **Deployment Process**:
 1. Push commits to `main` branch
 2. GitHub Actions builds the site with Jekyll
-3. Site deploys to https://gitsolved.github.io
+3. Site deploys to https://www.secureyourgear.com
 4. Updates are live within 1-2 minutes
 
 ## Project Structure
@@ -168,11 +168,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Website**: [gitsolved.github.io](https://gitsolved.github.io)
-- **Email**: samir@gitsolved.dev
+- **Website**: [www.secureyourgear.com](https://www.secureyourgear.com)
+- **Email**: samir@secureyourgear.com
 - **LinkedIn**: [Samir Anastasio](https://www.linkedin.com/in/samiranastasio/)
 - **GitHub**: [@GitSolved](https://github.com/GitSolved)
-- **Twitter**: [@GitSolved](https://twitter.com/GitSolved)
+- **Twitter**: [@SecureYourGear](https://twitter.com/SecureYourGear)
 
 ---
 

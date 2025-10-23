@@ -8,7 +8,7 @@ order: 4
 
 ## Hi, I'm Samir Anastasio
 
-I'm a security researcher specializing in **AI Security** and **Binary Exploitation**, with a focus on discovering and understanding vulnerabilities in modern systems. Through GitSolved, I share technical writeups, research, and educational content to help others learn offensive security techniques.
+I'm a security researcher specializing in **AI Security** and **Binary Exploitation**, with a focus on discovering and understanding vulnerabilities in modern systems. Through SecureYourGear, I share technical writeups, research, and educational content to help others learn offensive security techniques.
 
 ### What I Do
 
@@ -55,7 +55,7 @@ I'm always interested in collaborating on security research and discussing new t
 
 - **GitHub**: [@GitSolved](https://github.com/GitSolved)
 - **LinkedIn**: [Samir Anastasio](https://www.linkedin.com/in/samiranastasio/)
-- **Email**: samir@gitsolved.dev
+- **Email**: samir@secureyourgear.com
 
 ---
 

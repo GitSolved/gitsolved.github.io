@@ -1,6 +1,6 @@
 ---
 title: "OverTheWire - Linux CTF: Levels 18-33"
-author: GitSolved Team
+author: SecureYourGear Team
 date: 2024-10-17 12:00:00 +0800
 categories: [CTF, OverTheWire]
 tags: [bandit, overthewire, ctf, linux, privilege-escalation, cron, git, setuid, scripting]

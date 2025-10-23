@@ -1,6 +1,6 @@
 ---
 title: "Security Automation Lab: Wazuh SIEM + TheHive + Shuffle SOAR"
-author: GitSolved Team
+author: SecureYourGear Team
 date: 2024-11-15 12:00:00 +0800
 categories: [Blue Team, SOC]
 tags: [soc, automation, wazuh, thehive, shuffle, soar, siem, security-operations]
@@ -951,7 +951,7 @@ A high-severity security event has been automatically detected and investigated.
 **TheHive Case:** $thehive_case_url
 
 ---
-This alert was generated automatically by the GitSolved SOC Automation Platform.
+This alert was generated automatically by the SecureYourGear SOC Automation Platform.
 ```
 
 **What Happens on the Receiving End:**

@@ -1,17 +1,17 @@
-// Typing animation for Incident Response Lifecycle
+// Typing animation for AI Security Research & CTF Challenges
 document.addEventListener('DOMContentLoaded', function() {
   const subtitleElement = document.querySelector('.site-subtitle');
   if (!subtitleElement) return;
 
-  const phases = ['Prepare', 'Detect', 'Analyze', 'Contain', 'Eradicate', 'Recover', 'Learn'];
+  const phases = ['AI Security', 'CTF Challenges', 'Binary Exploitation', 'Prompt Injection', 'OWASP LLM', 'ROP Chains', 'Security Research'];
   const colors = [
-    '#00aaff',  // Prepare - Cyan/Blue (calm, proactive readiness)
-    '#ffd700',  // Detect - Gold/Yellow (alert state, warning)
-    '#ffa500',  // Analyze - Orange (increased urgency, investigation)
-    '#ff4500',  // Contain - Red-Orange (critical action, preventing spread)
-    '#ff0000',  // Eradicate - Red (maximum threat, active elimination)
-    '#00ff00',  // Recover - Green (success, restoration, healing)
-    '#a855f7'   // Learn - Purple (wisdom, knowledge, reflection)
+    '#a855f7',  // AI Security - Purple (intelligence, advanced tech)
+    '#00aaff',  // CTF Challenges - Cyan/Blue (learning, problem-solving)
+    '#ff4500',  // Binary Exploitation - Red-Orange (low-level, critical)
+    '#ffd700',  // Prompt Injection - Gold/Yellow (creativity, bypass)
+    '#ff6b6b',  // OWASP LLM - Coral Red (vulnerability focus)
+    '#00ff00',  // ROP Chains - Green (technical success, complexity)
+    '#9333ea'   // Security Research - Deep Purple (knowledge, expertise)
   ];
 
   let currentPhaseIndex = 0;

@@ -14,26 +14,26 @@ prefer_datetime_locale:
 timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
-title: SecureYourGear                          # the main title
-tagline: Incident Response Lifecycle  # it will display as the sub-title
+title: GitSolved                          # the main title
+tagline: AI Security Research & CTF Challenges  # it will display as the sub-title
 description: >-                        # used by seo meta and the atom feed
-  Samir Anastasio
+  Samir Anastasio - AI Security Research | OWASP LLM Vulnerabilities & CTF Challenges
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://www.secureyourgear.com'
+url: 'https://gitsolved.github.io'
 github:
-  username: SecureYourGear             # change to your github username
+  username: GitSolved             # change to your github username
 twitter:
-  username: SecureYourGear           # change to your twitter username
+  username: GitSolved           # change to your twitter username
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Samir Anastasio
-  email: samir@secureyourgear.com            # change to your email address
+  email: samir@gitsolved.dev            # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/samiranastasio/
-    - https://github.com/SecureYourGear       # change to your github homepage
-    - https://twitter.com/SecureYourGear      # change to your twitter homepage
+    - https://github.com/GitSolved       # change to your github homepage
+    - https://twitter.com/GitSolved      # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
 google_site_verification:               # fill in to your verification string
